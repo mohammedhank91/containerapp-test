@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - '**'
+    - 'Dockerfile/**'
     - '.github/workflows/test-AutoDeployTrigger-3033bf4c-efc4-4635-b928-05f2845f566b.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: pheno91/pheno91:${{ github.sha }}
-          file: /Dockerfile
-          context: /
+          file: Dockerfile/Dockerfile
+          context: Dockerfile/
 
 
   deploy:
